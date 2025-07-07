@@ -26,4 +26,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: 🧠 Run Streamlit App
-        run: streamlit run app.py  # ⬅️ change 'app.py' to your actual Streamlit filename
+        run: streamlit run main.py  # ⬅️ change 'app.py' to your actual Streamlit filename
