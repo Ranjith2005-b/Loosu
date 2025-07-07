@@ -9,7 +9,7 @@ jobs:
   build-and-run:
     runs-on: ubuntu-latest
     env:
-      HF_TOKEN: ${{ secrets.SERVER_ENV }}  # ⬅️ this reads from your GitHub secret
+      HF_TOKEN: ${{ secrets.SERVER_ENV }}  # ✅ reads from your GitHub secret
 
     steps:
       - name: 🛒 Checkout code
@@ -25,7 +25,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 🧠 Run Python script (Optional: Streamlit App)
-        run: python your_script.py
-        # OR if you're running Streamlit locally on GitHub Actions:
-        # run: streamlit run your_script.py
+      - name: 🧠 Run Streamlit App
+        run: streamlit run app.py  # ⬅️ change 'app.py' to your actual Streamlit filename
