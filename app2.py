@@ -3,7 +3,6 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from huggingface_hub import InferenceClient
 from sklearn.model_selection import train_test_split
@@ -11,8 +10,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from PIL import Image
 
-# ✅ Load .env
-load_dotenv()
 HF_TOKEN = os.getenv("HF_TOKEN")
 
 # 🔐 Check token
