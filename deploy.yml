@@ -1,3 +1,5 @@
+env:
+  HF_TOKEN: ${{ secrets.SERVER_ENV }}  # ✅ maps your secret to expected variable
 name: ?? Deploy Streamlit App with HF Token
 
 on:
